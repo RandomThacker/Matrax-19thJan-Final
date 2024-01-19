@@ -186,6 +186,7 @@ body {
   left: 50%;
   z-index: 99;
   line-height: 9rem;
+  opacity: 0;
 }
 
 .imgBackgroundHero {

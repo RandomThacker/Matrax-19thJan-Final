@@ -68,14 +68,17 @@ function dom() {
 
   function files(index) {
     const data = `
-      ./images/SequenceImages/jlsousa tires project 4  Urcola+.3117.${
-        31 + index
-      }.png
+      ./images/SequenceImages/jlsousa tires project 4  Urcola+.72.${
+        11 + index
+      }-min.png
       `;
     return data.trim();
   }
 
-  const frameCount = 121;
+
+
+
+  const frameCount = 141;
   const images = [];
 
   for (let i = 0; i < frameCount; i++) {
@@ -93,8 +96,8 @@ function dom() {
       pin: true,
       trigger: "#main",
       start: "top top",
-      end: "8% top",
-      // markers:true,
+      end: "3% top",
+      markers:true,
     },
     onUpdate: render,
   });
@@ -126,6 +129,16 @@ function dom() {
     );
   }
 
+  gsap.from(".HeroHeading h1", {
+    opacity: 1,
+    scrollTrigger: {
+      scrub: 1,
+      trigger: ".navBar",
+      start: "top top",
+      end: "center top",
+      markers:true,
+    },
+  });
   // gsap.to(".heroSection>canvas", {
   //   scale: 0.8,
   //   scrollTrigger: {
@@ -144,6 +157,8 @@ function dom() {
 }
 
 dom();
+
+
 
 function videoSection() {
   let video = document.querySelector(".videoSection video");
