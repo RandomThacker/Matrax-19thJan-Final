@@ -43,12 +43,12 @@ document.addEventListener("DOMContentLoaded", function () {
   splide.mount();
 });
 
-gsap.from(".heroCanvas", {
-  x: 1300,
-  rotate: 360,
-  // repeat:-1,
-  duration: 4,
-});
+// gsap.from(".heroCanvas", {
+//   x: 1300,
+//   rotate: 360,
+//   // repeat:-1,
+//   duration: 4,
+// });
 
 function dom() {
   const canvas = document.querySelector(".heroSection>canvas");
