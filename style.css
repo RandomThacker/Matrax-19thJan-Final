@@ -904,7 +904,7 @@ body {
 .globalPresenceContent {
   display: flex;
   flex-direction: row;
-  height: 35vh;
+  height: 40vh;
   /* background-color: cornflowerblue; */
   align-items: flex-end;
   padding: 0 0 4vw 12vw;
@@ -925,7 +925,9 @@ body {
   /* background-color: aqua; */
   margin: 0;
   padding: 0;
+  margin-top: 40px;
   overflow-y: hidden;
+  /* background-color: red; */
 }
 .globalPresenceImage img {
   /* scale:0.7; */
@@ -938,7 +940,7 @@ body {
   padding: 1vw 0;
 }
 .globalPresenceImage {
-  height: 65vh;
+  height: 60vh;
   z-index: 99;
   /* background-color: rgb(192, 204, 27); */
 }
@@ -950,7 +952,7 @@ body {
 
 .button-global-presence {
   position: absolute;
-  top: 10px;
+  top: 20px;
   left: 10px;
   background-color: black;
   color: white;
@@ -1198,7 +1200,7 @@ footer {
   z-index: 99;
 }
 .text-container p {
-  font-size: 1.5vw;
+  font-size: 1.2vw;
   font-weight: 200;
   padding-top: 2rem;
 }
@@ -1227,7 +1229,7 @@ footer {
   margin: 0.4rem;
   transition: all ease 0.5s;
 
-  height: 20vw;
+  height: 32vh;
   z-index: 99;
 }
 
