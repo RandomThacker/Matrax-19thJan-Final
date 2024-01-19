@@ -402,75 +402,75 @@ function logoShrink() {
     left: "50%",
     transformOrigin: "center center", // Set the transform origin to the center
   });
-
   let tl1 = gsap.timeline({
     scrollTrigger: {
       trigger: "#main",
       start: "57.5% top",
       end: "70% top",
-      // markers: true,
       scrub: 1.5,
       pin: true,
       pinSpacing: true,
       invalidateOnRefresh: true,
+      onEnter: () => {
+        gsap.set(".bullimg", { zIndex: 10 });
+      },
+      onLeaveBack: () => {
+        gsap.set(".bullimg", { zIndex: 1 });
+      },
     },
     defaults: { ease: "none" },
   });
-
-  tl1.fromTo(
-    dot,
-    {
-      scale: 0,
-      // zIndex: "10",
-    },
-    {
-      scale: 1,
-      // ease: "power3.in",
-    }
-  );
-
+  
+  tl1.fromTo(dot, { scale: 0 }, { scale: 1 });
+  
   if (window.innerWidth < 600) {
     tl1.to(".bullimg", { duration: 0.8, width: "55%", y: -300 }, "+.6");
     tl1.to(".bullimg", {
-      duration: 0.8,
+      duration: 0.1,
       onStart: function () {
-        document.querySelector(".bullimg").src = newImageUrl;
+        gsap.to(".bullimg", { duration: 0.5, opacity: 0, ease: "power2.inOut" });
+        setTimeout(function () {
+          document.querySelector(".bullimg").src = newImageUrl;
+          gsap.to(".bullimg", { duration: 0.5, opacity: 1, ease: "power2.inOut" });
+        }, 600);
       },
       onReverseComplete: function () {
-        document.querySelector(".bullimg").src = originalImageUrl;
+        gsap.to(".bullimg", { duration: 0.5, opacity: 0, ease: "power2.inOut" });
+        setTimeout(function () {
+          document.querySelector(".bullimg").src = originalImageUrl;
+          gsap.to(".bullimg", { duration: 0.5, opacity: 1, ease: "power2.inOut" });
+        }, 700);
       },
     });
+  
     tl1.to(".nameLogo", { duration: 0.8, y: -650 }, "+.6");
     tl1.to(".logoTextSection", { duration: 0.8, y: -600 }, "+.9");
-  }else if(window.innerWidth > 600 && window.innerWidth<1500){
+  } else {
     tl1.to(".bullimg", { zIndex: 10 });
     tl1.to(".bullimg", { duration: 0.8, width: "15%", y: -200 }, "+.6");
     tl1.to(".bullimg", {
-      duration: 0.8,
+      duration: 0.1,
       onStart: function () {
-        document.querySelector(".bullimg").src = newImageUrl;
+        gsap.to(".bullimg", { duration: 0.5, opacity: 0, ease: "power2.inOut" });
+        setTimeout(function () {
+          document.querySelector(".bullimg").src = newImageUrl;
+          gsap.to(".bullimg", { duration: 0.5, opacity: 1, ease: "power2.inOut" });
+        }, 600);
       },
       onReverseComplete: function () {
-        document.querySelector(".bullimg").src = originalImageUrl;
+        gsap.to(".bullimg", { duration: 0.5, opacity: 0, ease: "power2.inOut" });
+        setTimeout(function () {
+          document.querySelector(".bullimg").src = originalImageUrl;
+          gsap.to(".bullimg", { duration: 0.5, opacity: 1, ease: "power2.inOut" });
+        }, 700);
       },
     });
+  
     tl1.to(".nameLogo", { duration: 0.8, y: -530, width: "0" }, "+.6");
     tl1.to(".logoTextSection", { duration: 0.8, y: -500 }, "+.9");
-  }  else {
-    tl1.to(".bullimg", { zIndex: 10 });
-    tl1.to(".bullimg", { duration: 0.8, width: "15%", y: -200 }, "+.6");
-    tl1.to(".bullimg", {
-      duration: 0.8,
-      onStart: function () {
-        document.querySelector(".bullimg").src = newImageUrl;
-      },
-      onReverseComplete: function () {
-        document.querySelector(".bullimg").src = originalImageUrl;
-      },
-    });
-    tl1.to(".nameLogo", { duration: 0.8, y: -530, width: "0" }, "+.6");
-    tl1.to(".logoTextSection", { duration: 0.8, y: -630 }, "+.9");
   }
+  
+  
 
   // --------------------------------
 
