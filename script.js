@@ -97,7 +97,7 @@ function dom() {
       trigger: "#main",
       start: "top top",
       end: "3% top",
-      markers:true,
+      // markers:true,
     },
     onUpdate: render,
   });
@@ -136,7 +136,7 @@ function dom() {
       trigger: ".navBar",
       start: "top top",
       end: "center top",
-      markers:true,
+      // markers:true,
     },
   });
   // gsap.to(".heroSection>canvas", {
@@ -165,9 +165,9 @@ function videoSection() {
 
   ScrollTrigger.create({
     trigger: "#main",
-    // markers:true,
-    start: "9% top",
-    end: "45% top",
+    markers:true,
+    start: "3% top",
+    end: "30% top",
     // pin:".videoSection",
     onEnter: () => video.play(),
     onEnterBack: () => video.play(),
