@@ -1,19 +1,21 @@
 // import Splide from "@splidejs/splide";
 
-var splide3 = new Splide(".splide", {
+var splide3 = new Splide("#splide", {
   classes: {
     pagination: "splide__pagination tyre-pagination",
     page: "splide__pagination__page your-class-page",
   },
   autoplay: "play",
-  intersection: {
-    inView: {
-      autoplay: true,
-    },
-    outView: {
-      autoplay: false,
-    },
-  },
+  pauseOnHover: false,
+
+  // intersection: {
+  //   inView: {
+  //     autoplay: true,
+  //   },
+  //   outView: {
+  //     autoplay: false,
+  //   },
+  // },
   type: "loop",
   perPage: 1,
   arrows: false,
