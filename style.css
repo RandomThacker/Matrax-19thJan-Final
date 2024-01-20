@@ -733,25 +733,35 @@ body {
 
 .bullStory h1 {
   text-transform: uppercase;
-  font-size: clamp(4rem, 10vw, 10rem);
+  color: #fff;
+  font-size: clamp(3.5rem, 6vw, 8rem);
   text-align: center;
   font-weight: 800;
-  line-height: 10vw;
   overflow: hidden;
 }
 
-@media screen and (min-width: 320px) and (max-width: 768px) {
-  .bullStory h1 {
-    line-height: 20vw;
-  }
+.bullStory-button {
+  background-color: #fff;
+  padding: 5px 10px;
+  border-radius: 11px;
+  z-index: 5;
+  margin-top: 8%;
+  margin-bottom: 5%;
 }
+.bullStory-button:hover {
+  cursor: pointer;
+  transform: scale(1.1);
+  transition: all 300ms;
+}
+
 .bullStoryOverlay {
-  height: 83vh;
+  height: 80vh;
+
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  gap: 2rem;
+  /* gap: 2rem; */
   position: absolute;
   transform: translate(-50%, -50%);
   top: 150%;
@@ -765,16 +775,32 @@ body {
 }
 
 .bullStoryText {
+  position: absolute;
   text-align: center;
   display: flex;
   flex-direction: column;
   gap: 0.3rem;
+  width: 200%;
+  padding-top: 32vw;
 }
 
 .bullStoryText p {
   font-weight: 600;
 }
 
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .bullStory h1 {
+    line-height: 3.7rem;
+  }
+  .bullStoryText {
+    font-size: 0.7rem;
+  }
+
+  .bullStoryText {
+    width: 190%;
+    padding-top: 190%;
+  }
+}
 /* -------------------------The Bull Story-------------------- */
 
 /* <!-- -------------------Logo Shrink Section------------------ --> */

@@ -75,9 +75,6 @@ function dom() {
     return data.trim();
   }
 
-
-
-
   const frameCount = 141;
   const images = [];
 
@@ -158,14 +155,12 @@ function dom() {
 
 dom();
 
-
-
 function videoSection() {
   let video = document.querySelector(".videoSection video");
 
   ScrollTrigger.create({
     trigger: "#main",
-    markers:true,
+    markers: true,
     start: "3% top",
     end: "30% top",
     // pin:".videoSection",
@@ -368,7 +363,7 @@ function bullStory() {
         end: "52% top",
         scrub: 2,
       },
-      top: "60%",
+      top: "50%",
     });
   } else {
     gsap.to(".bullStoryOverlay", {
@@ -379,7 +374,7 @@ function bullStory() {
         end: "52% top",
         scrub: 2,
       },
-      top: "50%",
+      top: "55%",
     });
   }
 }
@@ -420,29 +415,45 @@ function logoShrink() {
     },
     defaults: { ease: "none" },
   });
-  
+
   tl1.fromTo(dot, { scale: 0 }, { scale: 1 });
-  
+
   if (window.innerWidth < 600) {
     tl1.to(".bullimg", { duration: 0.8, width: "55%", y: -300 }, "+.6");
     tl1.to(".bullimg", {
       duration: 0.1,
       onStart: function () {
-        gsap.to(".bullimg", { duration: 0.5, opacity: 0, ease: "power2.inOut" });
+        gsap.to(".bullimg", {
+          duration: 0.5,
+          opacity: 0,
+          ease: "power2.inOut",
+        });
         setTimeout(function () {
           document.querySelector(".bullimg").src = newImageUrl;
-          gsap.to(".bullimg", { duration: 0.5, opacity: 1, ease: "power2.inOut" });
+          gsap.to(".bullimg", {
+            duration: 0.5,
+            opacity: 1,
+            ease: "power2.inOut",
+          });
         }, 600);
       },
       onReverseComplete: function () {
-        gsap.to(".bullimg", { duration: 0.5, opacity: 0, ease: "power2.inOut" });
+        gsap.to(".bullimg", {
+          duration: 0.5,
+          opacity: 0,
+          ease: "power2.inOut",
+        });
         setTimeout(function () {
           document.querySelector(".bullimg").src = originalImageUrl;
-          gsap.to(".bullimg", { duration: 0.5, opacity: 1, ease: "power2.inOut" });
+          gsap.to(".bullimg", {
+            duration: 0.5,
+            opacity: 1,
+            ease: "power2.inOut",
+          });
         }, 700);
       },
     });
-  
+
     tl1.to(".nameLogo", { duration: 0.8, y: -650 }, "+.6");
     tl1.to(".logoTextSection", { duration: 0.8, y: -600 }, "+.9");
   } else {
@@ -451,26 +462,40 @@ function logoShrink() {
     tl1.to(".bullimg", {
       duration: 0.1,
       onStart: function () {
-        gsap.to(".bullimg", { duration: 0.5, opacity: 0, ease: "power2.inOut" });
+        gsap.to(".bullimg", {
+          duration: 0.5,
+          opacity: 0,
+          ease: "power2.inOut",
+        });
         setTimeout(function () {
           document.querySelector(".bullimg").src = newImageUrl;
-          gsap.to(".bullimg", { duration: 0.5, opacity: 1, ease: "power2.inOut" });
+          gsap.to(".bullimg", {
+            duration: 0.5,
+            opacity: 1,
+            ease: "power2.inOut",
+          });
         }, 600);
       },
       onReverseComplete: function () {
-        gsap.to(".bullimg", { duration: 0.5, opacity: 0, ease: "power2.inOut" });
+        gsap.to(".bullimg", {
+          duration: 0.5,
+          opacity: 0,
+          ease: "power2.inOut",
+        });
         setTimeout(function () {
           document.querySelector(".bullimg").src = originalImageUrl;
-          gsap.to(".bullimg", { duration: 0.5, opacity: 1, ease: "power2.inOut" });
+          gsap.to(".bullimg", {
+            duration: 0.5,
+            opacity: 1,
+            ease: "power2.inOut",
+          });
         }, 700);
       },
     });
-  
+
     tl1.to(".nameLogo", { duration: 0.8, y: -530, width: "0" }, "+.6");
     tl1.to(".logoTextSection", { duration: 0.8, y: -500 }, "+.9");
   }
-  
-  
 
   // --------------------------------
 
