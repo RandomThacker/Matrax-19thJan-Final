@@ -1,6 +1,6 @@
 // import Splide from "@splidejs/splide";
 
-var splide = new Splide(".splide", {
+var splide3 = new Splide(".splide", {
   classes: {
     pagination: "splide__pagination tyre-pagination",
     page: "splide__pagination__page your-class-page",
@@ -21,7 +21,7 @@ var splide = new Splide(".splide", {
   // speed: 40,
 });
 
-splide.mount(window.splide.Extensions);
+splide3.mount(window.splide3.Extensions);
 
 // gsap styles, maybe not required idk
 
