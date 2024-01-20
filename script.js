@@ -25,9 +25,60 @@ document.body.addEventListener("mousemove", function (dets) {
   });
 });
 
-function showNav() {
-  document.getElementsByClassName("navigation")[0].classList.toggle("active");
+// function showNav() {
+//   document.getElementsByClassName("navigation")[0].classList.toggle("active");
+//   // Get the body element
+//   var body = document.body;
+
+//   // Toggle the 'no-scroll' class on the body
+//   body.classList.toggle("no-scroll");
+// }
+
+function disableScroll() {
+  // Get the current scroll position
+  var scrollY = window.scrollY;
+
+  // Save the current scroll position to scroll back to it later
+  document.body.dataset.scrollY = scrollY;
+
+  // Disable scroll by setting the body's position to fixed and top to negative of the scroll position
+  document.body.style.position = "fixed";
+  document.body.style.top = `-${scrollY}px`;
 }
+
+function enableScroll() {
+  // Get the saved scroll position
+  var scrollY = parseInt(document.body.dataset.scrollY || "0");
+
+  // Enable scroll by setting the body's position back to its original state
+  document.body.style.position = "";
+  document.body.style.top = "";
+
+  // Scroll back to the original position
+  window.scrollTo(0, scrollY);
+
+  // Remove the stored scroll position
+  delete document.body.dataset.scrollY;
+}
+
+function showNav() {
+  var navigation = document.getElementsByClassName("navigation")[0];
+  navigation.classList.toggle("active");
+
+  // Get the body element
+  var body = document.body;
+
+  // Toggle the 'no-scroll' class on the body
+  body.classList.toggle("no-scroll");
+
+  // If the 'no-scroll' class is present, disable scroll; otherwise, enable scroll
+  if (body.classList.contains("no-scroll")) {
+    disableScroll();
+  } else {
+    enableScroll();
+  }
+}
+
 document.addEventListener("DOMContentLoaded", function () {
   var splide = new Splide(".splide", {
     direction: "ttb",
