@@ -443,6 +443,10 @@ function myFunction(x) {
     title.innerHTML = "We're Sure to Click!"
     email.innerHTML = "Click Here to Email Us"
   }
+  else{
+    title.innerHTML = "Let's Get in Touch"
+    email.innerHTML = "Email Us"
+  }
 }
 
 // Create a MediaQueryList object
