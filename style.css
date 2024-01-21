@@ -877,113 +877,6 @@ body {
 
 /* ---------global presence------- */
 
-/* ---------Footer-------- */
-
-footer {
-  height: 70vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-around;
-  background-color: black;
-  color: white;
-  z-index: 99 !important;
-  position: relative;
-}
-
-.footerTop {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 5vw;
-  z-index: 99;
-}
-
-.footerTop button {
-  border: 1px solid white;
-  border-radius: 25px;
-  padding: 10px 15px;
-  background-color: transparent;
-  color: white;
-  text-transform: uppercase;
-  font-size: 1.3vw;
-  font-weight: 600;
-  transition: all ease 0.3s;
-}
-
-.footerTop button:hover {
-  border: 1px solid #cd9c49;
-  background-color: #ffffff27;
-  color: #cd9c49;
-}
-
-.footerBottom {
-  display: flex;
-  justify-content: space-between;
-  padding: 0 5vw;
-  font-size: 0.8vw;
-}
-
-.footerBottomLeft {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.footerMiddle {
-  padding: 0;
-}
-
-/* -----------Scroller (Marquee)---------- */
-
-.scroller {
-  /* background-color: red; */
-  white-space: nowrap;
-  overflow: hidden;
-  position: relative;
-  z-index: 10;
-  margin-bottom: 15px;
-}
-
-.scroller-in {
-  display: inline-block;
-  white-space: nowrap;
-  animation-name: scroll;
-  animation-duration: 10s;
-  animation-timing-function: linear;
-  animation-iteration-count: infinite;
-}
-
-.scroller h4 {
-  display: inline-block;
-  font-size: 6.5vw;
-  font-weight: 800;
-  margin-right: 20px;
-  transition: all linear 0.3s;
-  font-style: italic;
-}
-
-@keyframes scroll {
-  from {
-    transform: translateX(0);
-  }
-  to {
-    transform: translateX(-100%);
-  }
-}
-
-@media screen and (min-width: 320px) and (max-width: 768px) {
-  .scroller h4 {
-    font-size: 4rem;
-  }
-
-  .footerBottom {
-    font-size: 0.6rem;
-  }
-
-  .footerTop button {
-    font-size: 0.6rem;
-  }
-}
-/* ------------Footer----------- */
 
 /* Non JS ecosys card */
 
@@ -1162,3 +1055,160 @@ footer {
   background-color: #cd9f505d;
 }
 
+
+
+
+/* ----------------------------------------------- */
+
+/* ---------Footer-------- */
+
+footer {
+  height: 70vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  background-color: black;
+  color: white;
+  z-index: 99 !important;
+  position: relative;
+}
+
+.footerTop {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5vw;
+  z-index: 99;
+}
+
+.footerTop button {
+  border: 1px solid white;
+  border-radius: 25px;
+  padding: 10px 15px;
+  background-color: transparent;
+  color: white;
+  text-transform: uppercase;
+  font-size: 1.3vw;
+  font-weight: 600;
+  transition: all ease 0.3s;
+}
+
+.footerTop button:hover {
+  border: 1px solid #cd9c49;
+  background-color: #ffffff27;
+  color: #cd9c49;
+}
+
+.footerBottom {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 5vw;
+  font-size: 0.8vw;
+}
+
+.footerBottomLeft {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ------------------------------------- */
+.footerMiddleNoLenis {
+  padding: 0;
+}
+
+.footerTextDiv {
+  z-index: 999;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: end;
+  padding: 0 5vw;
+  position: relative;
+  transition: all ease 0.5s;
+
+  /* background-color: darkblue; */
+}
+
+.footerTextDiv:hover{
+  opacity: 1;
+  text-decoration: none;
+  justify-content: start;
+  transition: all ease 0.5s;
+  /* font-size: x-large; */
+}
+
+.footerTextDiv:hover .emailtext a{
+  display: block;
+  transition: all ease 0.5s;
+
+}
+
+.footerTextDiv:hover .longerLine
+{
+  min-width: 53%;
+  transition: all ease 0.5s;
+}
+
+.footerText {
+  font-size: 4vw;
+  font-style: italic;
+  transition: all ease 0.5s;
+
+  /* background-color: red; */
+}
+
+.emailtext a{
+  display: none;
+  text-decoration: none;
+  font-size: 2vw;
+  font-style: italic;
+  color: white;
+  position: absolute;
+  top: 20%;
+  right: 5%;
+  transition: all ease 0.5s;
+  /* background-color: red; */
+}
+
+.divlines {
+  background-color: grey;
+  height: 1.5px;
+  min-width: 5%;
+  opacity: 1;
+  margin-bottom: 23px;
+  transition: all ease 0.5s;
+}
+
+@media screen and (min-width: 320px) and (max-width: 768px) {
+  .scroller h4 {
+    font-size: 4rem;
+  }
+
+  .footerBottom {
+    font-size: 0.6rem;
+  }
+
+  .footerTop button {
+    font-size: 0.6rem;
+  }
+
+  .footerText {
+    font-size: 1.2rem;
+  }
+
+  .emailtext a{
+    font-size: 0.7rem;
+    top: 5%;
+    right: 4%;
+  }
+
+  .divlines {
+    margin-bottom: 6px;
+  }
+
+  .footerTextDiv:hover .longerLine
+{
+  min-width: 38%;
+}
+
+}

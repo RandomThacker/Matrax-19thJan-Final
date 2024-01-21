@@ -435,3 +435,23 @@ ecosystem();
 
 
 
+function myFunction(x) {
+  var title = document.querySelector(".footerText")
+  var email = document.querySelector(".emailtext a")
+  var footerDiv = document.querySelector(".footerTextDiv")
+  if (x.matches) { // If media query matches
+    title.innerHTML = "We're Sure to Click!"
+    email.innerHTML = "Click Here to Email Us"
+  }
+}
+
+// Create a MediaQueryList object
+var x = window.matchMedia("(max-width: 700px)")
+
+// Call listener function at run time
+myFunction(x);
+
+// Attach listener function on state changes
+x.addEventListener("change", function() {
+  myFunction(x);
+});
