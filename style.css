@@ -282,7 +282,6 @@ body {
 
 /* ------------Horizontal Scroll--------- */
 
-
 .slide-content {
   display: flex;
   /* gap: 1rem; */
@@ -532,7 +531,6 @@ body {
     top: 0%;
   }
 
-
   #main {
     position: relative;
   }
@@ -593,9 +591,14 @@ body {
 }
 
 .bullStoryImage img {
-  width: 45vw;
-  height: 25vw;
+  /* who put this code here? crazy people it was breaking the bull story image part smh */
+  /* width: 35vw;
+   height: 25vw; 
   object-fit: cover;
+  display: block;
+  margin: 0 auto; */
+
+  width: 35vw;
   display: block;
   margin: 0 auto;
 }
@@ -683,7 +686,7 @@ body {
   width: 65%;
 }
 
-.bottomTextSection img{
+.bottomTextSection img {
   scale: 0.7;
   cursor: pointer;
 }
