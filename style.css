@@ -281,113 +281,169 @@ body {
 /* <!-- ----------------Page 1 - Video Section------------- --> */
 
 /* ------------Horizontal Scroll--------- */
-#horizontal {
-  background-color: rgb(255, 255, 255);
-  height: 100vh;
+
+
+.slide-content {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  overflow: hidden;
+  /* gap: 1rem; */
+  z-index: 100;
+  background-color: red;
+  /* keey z-index high other while onhover pause wont happen */
 }
 
-#horizontal h2 {
-  text-align: center;
-  font-size: clamp(2.25rem, 7vw, 3.5rem);
-  font-weight: 800;
-  color: #000;
-  padding-top: 15vh;
-  z-index: 13;
-}
-
-.horizontal__content {
-  display: flex;
-  background-color: rgb(255, 255, 255);
-  padding: 0 3vw;
-  height: 63vh;
-  width: 130%;
-}
-
-.horizontal__item {
-  /* height: 35vh;
-  width: 35vh; */
-  height: max-content;
-  z-index: 50;
-  width: 20vw;
-  aspect-ratio: 1 / 1;
-  position: relative;
-  background: rgb(255, 255, 255);
-}
-
-.horizontal__item:not(:last-child) {
-  /* margin-right: 20vh; */
-  margin-right: 4.5vw;
-}
-
-.tyre_img_hor img {
-  /* width: 80%; */
-  width: 95%;
-}
-
-.tyre_img_hor {
-  /* width: 35vh;
-  height: 35vh; */
-  position: relative;
-  width: 100%;
-
-  height: 100%;
-  border: 1px solid black;
-  /* background: #000; */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 0.7rem;
-}
-
-.down {
-  margin-top: 25vh;
-}
-
-.up_up {
-  margin-top: -15vh;
-}
-
-.right_content_hor {
-  color: #cda050;
-  text-transform: uppercase;
-  font-size: 0.8rem;
-  font-weight: 500;
-}
-
-.left_content_hor {
-  text-transform: uppercase;
-  font-weight: 700;
-  color: #000;
-  font-size: 0.9rem;
+.left-slide,
+.right-slide {
   width: 50%;
+  height: 100vh;
+  background: #c8c8c8;
 }
 
-.content_hor {
-  display: flex;
-  justify-content: space-between;
-}
-
-.on_hover_tyre_hor {
-  font-size: 0.8rem;
-  color: white;
-  background-color: #000;
-  border-radius: 20px;
-  padding: 0.7rem 1.1rem;
+.middle-text {
+  /* height: 100vh; */
+  width: 100vw;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 6px;
+  grid-row-gap: 0px;
   position: absolute;
   transform: translate(-50%, -50%);
-  left: 50%;
   top: 50%;
-  transition: all 0.7s ease;
-  opacity: 0;
+  left: 50%;
+  z-index: 50;
+}
+.left-middle-text {
+  grid-area: 2 / 1 / 3 / 2;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
 }
 
-.horizontal__item:hover .on_hover_tyre_hor {
-  opacity: 1;
+.right-middle-text {
+  grid-area: 2 / 2 / 3 / 3;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  align-items: center;
+  flex-direction: column;
+}
+
+.middle-text-title {
+  font-size: 7rem;
+  font-weight: 800;
+  color: #fff;
+}
+
+.middle-text-subtitle {
+  font-size: 1rem;
+  font-weight: 600;
+  color: rgba(205, 160, 80, 1);
+}
+
+.middle-text-button {
+  margin-top: 3%;
+  text-transform: uppercase;
+  background-color: rgba(197, 197, 197, 0.56);
+  border: 1px solid #000;
+  border-radius: 11px;
+  padding: 5px;
+}
+.middle-text-button:hover {
   cursor: pointer;
+  background-color: rgba(197, 197, 197, 0.932);
+  transform: scale(1.1);
+  transition: all 300ms;
+}
+
+.left-side-tyre,
+.right-side-tyre {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 1;
+}
+
+.tyre-pagination .is-active {
+  background-color: rgba(205, 160, 80, 1) !important;
+  /* padding-bottom: 10%; */
+}
+.splide__pagination button {
+  margin-bottom: 50px;
+}
+
+/* responsive */
+@media (max-width: 768px) {
+  .slide-content {
+    display: flex;
+    flex-direction: column;
+    /* gap: 1rem; */
+    z-index: 100;
+    /* keep z-index high other while onhover pause wont happen */
+  }
+
+  .left-slide,
+  .right-slide {
+    width: 100%;
+    height: 50vh;
+    background: #c8c8c8;
+  }
+
+  .middle-text {
+    height: 100vh;
+    width: 100vw;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(6, 1fr);
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    top: 50%;
+    left: 50%;
+    z-index: 1;
+  }
+
+  .left-middle-text {
+    grid-area: 2 / 1 / 3 / 2;
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+    height: 0%;
+    margin: auto 0;
+    /* align-items: center; */
+    flex-direction: column;
+    z-index: 100 !important;
+  }
+
+  .right-middle-text {
+    grid-area: 5 / 1 / 6 / 2;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  .middle-text-title {
+    font-size: 5rem;
+  }
+
+  .middle-text-subtitle {
+    font-size: 1rem;
+  }
+
+  .splide__pagination {
+    height: fit-content;
+    /* background-color: #000; */
+    position: absolute;
+    transform: translate(0%, -50%);
+    top: 52.6%;
+    left: 50%;
+    margin-bottom: -5% !important;
+    /* position: absolute !important; */
+  }
 }
 
 /* ------------Horizontal Scroll--------- */
@@ -395,19 +451,7 @@ body {
 #main {
   position: relative;
 }
-@media screen and (min-width: 700px) and (max-width: 1100px) {
-  .horizontal__item {
-    height: max-content;
-    min-width: 25vw;
-    aspect-ratio: 1 / 1;
-    position: relative;
-    background: rgb(255, 255, 255);
-  }
 
-  .horizontal__item:not(:last-child) {
-    margin-right: 5vw;
-  }
-}
 @media screen and (min-width: 320px) and (max-width: 768px) {
   .heroSection {
     height: 100vh;
@@ -487,232 +531,11 @@ body {
     top: 0%;
   }
 
-  /* .videoOverlayText {
-    position: absolute;
-    bottom: -48%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 3em;
-    text-align: center;
-    z-index: 6;
-    width: 70%;
-    transition: all ease 0.5s;
-  } */
-
-  /* <!-- ----------------Page 1 - Video Section------------- --> */
-
-  /* ------------Horizontal Scroll--------- */
-  #horizontal {
-    background-color: rgb(255, 255, 255);
-    height: 100vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    overflow-x: hidden;
-  }
-
-  #horizontal h2 {
-    text-align: center;
-    font-size: clamp(1.25rem, 1.5rem, 3rem);
-    font-weight: 800;
-    color: #000;
-    padding-top: 10vh;
-  }
-
-  .horizontal__content {
-    display: flex;
-    background-color: rgb(255, 255, 255);
-    padding: 0 5rem;
-    height: 70vh;
-    /* width: 130%; */
-  }
-
-  .horizontal__item {
-    height: 35vh;
-    width: 35vh;
-    position: relative;
-    background: rgb(255, 255, 255);
-  }
-
-  .horizontal__item:not(:last-child) {
-    margin-right: 20vh;
-  }
-
-  .tyre_img_hor img {
-    width: 80%;
-  }
-
-  .tyre_img_hor {
-    width: 35vh;
-    height: 35vh;
-    border: 1px solid black;
-    /* background: #000; */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 0.7rem;
-  }
-
-  .down {
-    margin-top: 25vh;
-  }
-
-  .up_up {
-    margin-top: -15vh;
-  }
-
-  .right_content_hor {
-    color: #cda050;
-    text-transform: uppercase;
-    font-size: 0.8rem;
-    font-weight: 500;
-  }
-
-  .left_content_hor {
-    text-transform: uppercase;
-    font-weight: 700;
-    color: #000;
-    font-size: 0.9rem;
-    width: 50%;
-  }
-
-  .content_hor {
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .on_hover_tyre_hor {
-    font-size: 0.8rem;
-    color: white;
-    background-color: #000;
-    border-radius: 20px;
-    padding: 0.7rem 1.1rem;
-    /* width: 50%; */
-    position: absolute;
-    transform: translate(-50%, -50%);
-    left: 50%;
-    top: 50%;
-    transition: all 0.7s ease;
-    opacity: 0;
-  }
-
-  .horizontal__item:hover .on_hover_tyre_hor {
-    opacity: 1;
-    cursor: pointer;
-  }
-
-  /* ------------Horizontal Scroll--------- */
 
   #main {
     position: relative;
   }
 }
-
-/* <!-- --------------Curved Carousal Section---------- --> */
-
-.curved_container {
-  height: 100vh;
-  width: 100vw;
-  margin: 0 auto;
-  position: relative;
-  overflow: hidden;
-  background: url("./images/bg.jpg");
-  background-position: bottom;
-  background-size: cover;
-  position: relative;
-}
-
-.durability-header {
-  color: white;
-  font-size: clamp(1.85rem, 4vw, 4rem);
-  padding: 0 10%;
-  text-align: center;
-  font-weight: 900;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 100%;
-  padding-bottom: 5%;
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 30%;
-  left: 50%;
-  z-index: 50;
-  /* z-index: 90; */
-}
-
-.carrousel-wrappper {
-  position: absolute;
-  top: 60%;
-  left: 50%;
-  border-radius: 50%;
-  transition: all 0.3s linear;
-  display: flex;
-  gap: 10px;
-  z-index: 50;
-}
-
-.curveimage {
-  width: 100%;
-  height: 90%;
-  object-fit: contain;
-  background-color: #ffffff;
-  z-index: 99;
-}
-
-.single-item {
-  position: absolute;
-  height: 400px;
-  width: 400px;
-  transition: all 0.3s linear;
-  transition-property: height, width;
-  /* border-radius: 50%; */
-  overflow: hidden;
-  /* background: #ffffff; */
-  color: #cda050;
-  z-index: 99;
-}
-
-.hoverCurve {
-  color: rgb(255, 255, 255);
-  position: absolute;
-  transform: translate(-50%, -50%);
-  top: 45%;
-  left: 50%;
-  padding: 8px 20px;
-  border-radius: 25px;
-  background-color: rgba(0, 0, 0, 0.731);
-  font-size: 1.2rem;
-  font-weight: 500;
-  transition: all ease 0.8s;
-  opacity: 0;
-}
-
-.single-item:hover .hoverCurve {
-  opacity: 1;
-  cursor: pointer;
-}
-
-.empty-box {
-  background: transparent;
-}
-
-.sliderContCurveText {
-  display: flex;
-  justify-content: space-between;
-  /* position: absolute; */
-  z-index: 99;
-  font-weight: 400;
-  font-size: 0.8rem;
-}
-
-.sliderContCurveText h1 {
-  color: rgb(255, 255, 255);
-  text-transform: uppercase;
-}
-
-/* <!-- --------------Curved Carousal Section---------- --> */
 
 /* ----------------Bull Image CSS ----------------- */
 
@@ -1330,5 +1153,3 @@ footer {
   background-color: #cd9f505d;
 }
 
-.no-scroll {
-}
