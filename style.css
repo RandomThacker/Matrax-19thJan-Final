@@ -288,6 +288,7 @@ body {
   /* gap: 1rem; */
   z-index: 100;
   background-color: red;
+  overflow-x: hidden;
   /* keey z-index high other while onhover pause wont happen */
 }
 
@@ -680,6 +681,11 @@ body {
 
 .bottomTextSection {
   width: 65%;
+}
+
+.bottomTextSection img{
+  scale: 0.7;
+  cursor: pointer;
 }
 
 .nameLogo {

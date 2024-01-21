@@ -399,7 +399,7 @@ function logoShrink() {
     });
 
     tl1.to(".nameLogo", { duration: 0.8, y: -530, width: "0" }, "+.6");
-    tl1.to(".logoTextSection", { duration: 0.8, y: -500 }, "+.9");
+    tl1.to(".logoTextSection", { duration: 0.8, y: -450 }, "+.9");
   }
 
   // --------------------------------
