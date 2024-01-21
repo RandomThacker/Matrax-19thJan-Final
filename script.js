@@ -254,33 +254,33 @@ function bullStory() {
   ScrollTrigger.create({
     trigger: "#main",
     markers: true,
-    start: "43.5% top",
+    start: "42.9% top",
     end: "55% top",
     pin: true,
   });
-  // if (window.innerWidth < 600) {
-  //   gsap.to(".bullStoryOverlay", {
-  //     scrollTrigger: {
-  //       trigger: "#main",
-  //       markers: true,
-  //       start: "48.5% top",
-  //       end: "55% top",
-  //       scrub: 2,
-  //     },
-  //     top: "50%",
-  //   });
-  // } else {
-  //   gsap.to(".bullStoryOverlay", {
-  //     scrollTrigger: {
-  //       trigger: "#main",
-  //         markers: true,
-  //       start: "48.5% top",
-  //       end: "52% top",
-  //       scrub: 2,
-  //     },
-  //     top: "55%",
-  //   });
-  // }
+  if (window.innerWidth < 600) {
+    gsap.to(".bullStoryOverlay", {
+      scrollTrigger: {
+        trigger: "#main",
+        markers: true,
+        start: "42.9% top",
+        end: "55% top",
+        scrub: 2,
+      },
+      top: "50%",
+    });
+  } else {
+    gsap.to(".bullStoryOverlay", {
+      scrollTrigger: {
+        trigger: "#main",
+          markers: true,
+        start: "42.9% top",
+        end: "55% top",
+        scrub: 2,
+      },
+      top: "55%",
+    });
+  }
 }
 bullStory();
 
@@ -304,12 +304,13 @@ function logoShrink() {
   let tl1 = gsap.timeline({
     scrollTrigger: {
       trigger: "#main",
-      start: "57.5% top",
+      start: "57.15% top",
       end: "70% top",
       scrub: 1.5,
       pin: true,
       pinSpacing: true,
       invalidateOnRefresh: true,
+      markers:true,
       onEnter: () => {
         gsap.set(".bullimg", { zIndex: 10 });
       },

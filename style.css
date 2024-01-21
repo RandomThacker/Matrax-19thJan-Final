@@ -557,7 +557,8 @@ body {
 .bullStory h1 {
   text-transform: uppercase;
   color: #fff;
-  font-size: clamp(3.5rem, 6vw, 8rem);
+  font-size: clamp(3.5rem, 7vw, 8rem);
+  line-height: 7vw;
   text-align: center;
   font-weight: 800;
   overflow: hidden;
@@ -568,7 +569,7 @@ body {
   padding: 5px 10px;
   border-radius: 11px;
   z-index: 5;
-  margin-top: 8%;
+  margin-top: 6%;
   margin-bottom: 5%;
 }
 .bullStory-button:hover {
@@ -579,7 +580,6 @@ body {
 
 .bullStoryOverlay {
   height: 80vh;
-
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -592,7 +592,9 @@ body {
 }
 
 .bullStoryImage img {
-  width: 35vw;
+  width: 45vw;
+  height: 25vw;
+  object-fit: cover;
   display: block;
   margin: 0 auto;
 }
@@ -604,7 +606,7 @@ body {
   flex-direction: column;
   gap: 0.3rem;
   width: 200%;
-  padding-top: 32vw;
+  padding-top: 28vw;
 }
 
 .bullStoryText p {
@@ -635,6 +637,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  background-color: red;
   /* background-color: aqua; */
 }
 
