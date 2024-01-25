@@ -243,7 +243,7 @@ body {
   width: 100vw;
   background: #000000;
   position: absolute;
-  opacity: 0.8;
+  opacity: 0.9;
   z-index: 5;
   transition: all ease 0.1s;
   top: 0%;
@@ -346,9 +346,9 @@ body {
   margin-top: 3%;
   text-transform: uppercase;
   background-color: rgba(197, 197, 197, 0.56);
-  border: 1px solid #000;
+  /* border: 1px solid #000; */
   border-radius: 11px;
-  padding: 5px;
+  padding: 8px;
 }
 .middle-text-button:hover {
   cursor: pointer;
@@ -641,7 +641,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  /* background-color: red; */
+    background-color: red;
   /* background-color: aqua; */
 }
 
@@ -650,6 +650,7 @@ body {
   z-index: 9;
   transform: scale(1);
   transition: all ease 0.5s;
+  position: absolute;
 }
 
 .dot {
@@ -664,17 +665,20 @@ body {
 .logoTextSection {
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
   align-items: center;
   text-align: center;
-  height: 50vh;
-  /* background-color: rgb(178, 19, 19); */
+  gap: 2rem;
+  /* height: 50vh; */
+  background-color: rgb(178, 19, 19);
   color: white;
+  position: absolute;
+  width: 100%;
 }
 
 .logoTextSection p {
   font-size: 1.1rem;
   line-height: 1.8rem;
+  background-color: #cda050;
 }
 
 .logoTextSection h6 {
@@ -692,11 +696,19 @@ body {
 }
 
 .nameLogo {
-  width: 0%;
+  width: 15%;
+  position: absolute;
   display: block;
   margin: 0 auto;
   height: 10vh;
-  opacity: 0;
+  opacity: 1;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 120%;
+}
+
+.logoShrink{
+  position: relative;
 }
 
 /* <!-- -------------------Logo Shrink Section------------------ --> */
@@ -727,7 +739,7 @@ body {
   }
 
   .nameLogo {
-    width: 0%;
+    width: 15%;
     display: block;
     margin: 0 auto;
     height: 10vh;
@@ -891,7 +903,7 @@ body {
     Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   padding: 3%;
   height: 100vh;
-  margin-top: -60vh;
+  /* margin-top: -60vh; */
   display: flex;
   flex-direction: column;
   gap: 3rem;
@@ -1157,7 +1169,6 @@ footer {
   font-size: 4vw;
   font-style: italic;
   transition: all ease 0.5s;
-
   /* background-color: red; */
 }
 

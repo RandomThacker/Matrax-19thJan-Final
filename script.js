@@ -285,12 +285,7 @@ function bullStory() {
 bullStory();
 
 function logoShrink() {
-  let section = document.getElementById("section"),
     dot = document.querySelector(".dot");
-  var newImageUrl = "./images/motaroLogo.svg";
-  var originalImageUrl = "./images/bull.svg";
-
-  var bullimgElement = document.querySelector(".bullimg");
 
   gsap.set(dot, {
     width: "142vmax", // ensures it fills every part of the screen.
@@ -304,7 +299,7 @@ function logoShrink() {
   let tl1 = gsap.timeline({
     scrollTrigger: {
       trigger: "#main",
-      start: "57.15% top",
+      start: "57.14% top",
       end: "70% top",
       scrub: 1.5,
       pin: true,
@@ -325,86 +320,14 @@ function logoShrink() {
 
   if (window.innerWidth < 600) {
     tl1.to(".bullimg", { duration: 0.8, width: "55%", y: -300 }, "+.6");
-    tl1.to(".bullimg", {
-      duration: 0.1,
-      onStart: function () {
-        gsap.to(".bullimg", {
-          duration: 0.5,
-          opacity: 0,
-          ease: "power2.inOut",
-        });
-        setTimeout(function () {
-          document.querySelector(".bullimg").src = newImageUrl;
-          gsap.to(".bullimg", {
-            duration: 0.5,
-            opacity: 1,
-            ease: "power2.inOut",
-          });
-        }, 600);
-      },
-      onReverseComplete: function () {
-        gsap.to(".bullimg", {
-          duration: 0.5,
-          opacity: 0,
-          ease: "power2.inOut",
-        });
-        setTimeout(function () {
-          document.querySelector(".bullimg").src = originalImageUrl;
-          gsap.to(".bullimg", {
-            duration: 0.5,
-            opacity: 1,
-            ease: "power2.inOut",
-          });
-        }, 700);
-      },
-    });
-
     tl1.to(".nameLogo", { duration: 0.8, y: -650 }, "+.6");
     tl1.to(".logoTextSection", { duration: 0.8, y: -600 }, "+.9");
   } else {
-    tl1.to(".bullimg", { zIndex: 10 });
-    tl1.to(".bullimg", { duration: 0.8, width: "15%", y: -200 }, "+.6");
-    tl1.to(".bullimg", {
-      duration: 0.1,
-      onStart: function () {
-        gsap.to(".bullimg", {
-          duration: 0.5,
-          opacity: 0,
-          ease: "power2.inOut",
-        });
-        setTimeout(function () {
-          document.querySelector(".bullimg").src = newImageUrl;
-          gsap.to(".bullimg", {
-            duration: 0.5,
-            opacity: 1,
-            ease: "power2.inOut",
-          });
-        }, 600);
-      },
-      onReverseComplete: function () {
-        gsap.to(".bullimg", {
-          duration: 0.5,
-          opacity: 0,
-          ease: "power2.inOut",
-        });
-        setTimeout(function () {
-          document.querySelector(".bullimg").src = originalImageUrl;
-          gsap.to(".bullimg", {
-            duration: 0.5,
-            opacity: 1,
-            ease: "power2.inOut",
-          });
-        }, 700);
-      },
-    });
-
-    tl1.to(".nameLogo", { duration: 0.8, y: -530, width: "0" }, "+.6");
-    tl1.to(".logoTextSection", { duration: 0.8, y: -450 }, "+.9");
+    tl1.to(".bullimg", { duration: 0.8, width: "8%", top: "8%" }, "+.6");
+    tl1.to(".nameLogo", { duration:1, top: "25%" }, "+.6");
+    tl1.to(".logoTextSection", { duration: 0.8, top: "38%" }, "+.9");
   }
 
-  // --------------------------------
-
-  // --------------------------------
 }
 logoShrink();
 
