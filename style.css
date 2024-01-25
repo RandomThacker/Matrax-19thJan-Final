@@ -641,7 +641,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-    background-color: red;
+    /* background-color: red; */
   /* background-color: aqua; */
 }
 
@@ -669,7 +669,7 @@ body {
   text-align: center;
   gap: 2rem;
   /* height: 50vh; */
-  background-color: rgb(178, 19, 19);
+  /* background-color: rgb(178, 19, 19); */
   color: white;
   position: absolute;
   width: 100%;
@@ -677,7 +677,7 @@ body {
 
 .logoTextSection p {
   font-size: 1.3vw;
-  background-color: #cda050;
+  /* background-color: #cda050; */
 }
 
 .logoTextSection h6 {
