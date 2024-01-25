@@ -640,6 +640,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  position: relative;
   /* background-color: red; */
   /* background-color: aqua; */
 }
@@ -700,13 +701,12 @@ body {
   position: absolute;
   display: block;
   margin: 0 auto;
-  height: 10vh;
   opacity: 1;
   transform: translate(-50%, 0%);
   left: 50%;
   top: 120%;
   background-color: #cd9c49;
-  margin-top: 70px;
+  margin-top: 80px;
 }
 
 .logoShrink {
