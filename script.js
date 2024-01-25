@@ -175,7 +175,6 @@ function dom() {
 
 dom();
 
-
 function videoSection() {
   const splitTypes = document.querySelectorAll(".reveal-type");
   splitTypes.forEach((char, i) => {
@@ -184,71 +183,64 @@ function videoSection() {
     // Set initial opacity to 0
     gsap.set(text.chars, { opacity: 1 });
 
-    gsap.from(
-      text.chars,
-      {
-        scrollTrigger: {
-          trigger: "#main",
-          start: "14.3% top",
-          end: "20% top",
-          scrub: true,
-          // pin: true,
-          markers: true,
-        },
-        duration: 0.5, // Adjust the duration as needed
-        stagger: 0.1,
-        opacity: 0.2, // Set the target opacity to 1
+    gsap.from(text.chars, {
+      scrollTrigger: {
+        trigger: "#main",
+        start: "14.3% top",
+        end: "20% top",
+        scrub: true,
+        // pin: true,
+        markers: true,
       },
-    );
+      duration: 0.5, // Adjust the duration as needed
+      stagger: 0.1,
+      opacity: 0.2, // Set the target opacity to 1
+    });
   });
   ScrollTrigger.create({
     trigger: "#main",
     markers: true,
     start: "14.3% top",
     end: "20% top",
-    pin: true
+    pin: true,
     // pin:".videoSection",
   });
 }
 
 videoSection();
 
-function splitCarousel(){
-  
+function splitCarousel() {
   const splitTypes = document.querySelectorAll(".reveal-type1");
   splitTypes.forEach((char, i) => {
     const text = new SplitType(char, { types: "chars" });
-  
+
     // Set initial opacity to 0
     gsap.set(text.chars, { opacity: 1 });
-  
-    gsap.from(
-      text.chars,
-      {
-        scrollTrigger: {
-          trigger: "#main",
-          start: "28.5% top",
-          end: "34% top",
-          scrub: true,
-          // pin: true,
-          markers: true,
-        },
-        duration: 0.5, // Adjust the duration as needed
-        stagger: 0.1,
-        opacity: 0.2, // Set the target opacity to 1
+
+    gsap.from(text.chars, {
+      scrollTrigger: {
+        trigger: "#main",
+        start: "28.5% top",
+        end: "34% top",
+        scrub: true,
+        // pin: true,
+        markers: true,
       },
-    );
+      duration: 0.5, // Adjust the duration as needed
+      stagger: 0.1,
+      opacity: 0.2, // Set the target opacity to 1
+    });
   });
   ScrollTrigger.create({
     trigger: "#main",
     markers: true,
     start: "28.5% top",
     end: "34% top",
-    pin: true
+    pin: true,
     // pin:".videoSection",
   });
-  }
-  splitCarousel()
+}
+splitCarousel();
 
 function bullStory() {
   ScrollTrigger.create({
@@ -273,7 +265,7 @@ function bullStory() {
     gsap.to(".bullStoryOverlay", {
       scrollTrigger: {
         trigger: "#main",
-          markers: true,
+        markers: true,
         start: "42.9% top",
         end: "55% top",
         scrub: 2,
@@ -285,7 +277,7 @@ function bullStory() {
 bullStory();
 
 function logoShrink() {
-    dot = document.querySelector(".dot");
+  dot = document.querySelector(".dot");
 
   gsap.set(dot, {
     width: "142vmax", // ensures it fills every part of the screen.
@@ -305,7 +297,7 @@ function logoShrink() {
       pin: true,
       pinSpacing: true,
       invalidateOnRefresh: true,
-      markers:true,
+      markers: true,
       onEnter: () => {
         gsap.set(".bullimg", { zIndex: 10 });
       },
@@ -323,11 +315,10 @@ function logoShrink() {
     tl1.to(".nameLogo", { duration: 0.8, y: -650 }, "+.6");
     tl1.to(".logoTextSection", { duration: 0.8, y: -600 }, "+.9");
   } else {
-    tl1.to(".bullimg", { duration: 0.8, width: "7.5%", top: "8%" }, "+.6");
-    tl1.to(".nameLogo", { duration:1, top: "8%" }, "+.6");
+    tl1.to(".bullimg", { duration: 0.8, width: "8%", top: "8%" }, "+.6");
+    tl1.to(".nameLogo", { duration: 1, top: "25%" }, "+.6");
     tl1.to(".logoTextSection", { duration: 0.8, top: "38%" }, "+.9");
   }
-
 }
 logoShrink();
 
@@ -355,30 +346,53 @@ ecosystem();
 
 // ----------------Splide section----------------------
 
-
-
-
 function myFunction(x) {
-  var title = document.querySelector(".footerText")
-  var email = document.querySelector(".emailtext a")
-  var footerDiv = document.querySelector(".footerTextDiv")
-  if (x.matches) { // If media query matches
-    title.innerHTML = "We're Sure to Click!"
-    email.innerHTML = "Click Here to Email Us"
-  }
-  else{
-    title.innerHTML = "Let's Get in Touch"
-    email.innerHTML = "Email Us"
+  var title = document.querySelector(".footerText");
+  var email = document.querySelector(".emailtext a");
+  var footerDiv = document.querySelector(".footerTextDiv");
+  if (x.matches) {
+    // If media query matches
+    title.innerHTML = "We're Sure to Click!";
+    email.innerHTML = "Click Here to Email Us";
+  } else {
+    title.innerHTML = "Let's Get in Touch";
+    email.innerHTML = "Email Us";
   }
 }
 
 // Create a MediaQueryList object
-var x = window.matchMedia("(max-width: 700px)")
+var x = window.matchMedia("(max-width: 700px)");
 
 // Call listener function at run time
 myFunction(x);
 
 // Attach listener function on state changes
-x.addEventListener("change", function() {
+x.addEventListener("change", function () {
   myFunction(x);
 });
+
+// 3rd section
+var splideLeft = new Splide("#splide-left", {
+  arrows: false,
+  pagination: false,
+  direction: "rtl",
+  autoplay: true,
+  interval: 3000,
+  type: "loop",
+});
+var splideRight = new Splide("#splide-right", {
+  classes: {
+    pagination: "splide__pagination tyre-pagination",
+    page: "splide__pagination__page your-class-page",
+  },
+  arrows: false,
+  direction: "ltr",
+  autoplay: true,
+  interval: 6000,
+  type: "loop",
+});
+
+splideLeft.sync(splideRight);
+
+splideLeft.mount();
+splideRight.mount();

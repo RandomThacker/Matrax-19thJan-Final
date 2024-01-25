@@ -640,8 +640,7 @@ body {
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  position: relative;
-    /* background-color: red; */
+  /* background-color: red; */
   /* background-color: aqua; */
 }
 
@@ -710,7 +709,7 @@ body {
   margin-top: 70px;
 }
 
-.logoShrink{
+.logoShrink {
   position: relative;
 }
 
@@ -895,7 +894,6 @@ body {
 
 /* ---------global presence------- */
 
-
 /* Non JS ecosys card */
 
 .eco-section {
@@ -1073,9 +1071,6 @@ body {
   background-color: #cd9f505d;
 }
 
-
-
-
 /* ----------------------------------------------- */
 
 /* ---------Footer-------- */
@@ -1148,22 +1143,20 @@ footer {
   /* background-color: darkblue; */
 }
 
-.footerTextDiv:hover{
+.footerTextDiv:hover {
   opacity: 1;
   text-decoration: none;
-  justify-content: start;
+  /* justify-content: start; */
   transition: all ease 0.5s;
   /* font-size: x-large; */
 }
 
-.footerTextDiv:hover .emailtext a{
+.footerTextDiv:hover .emailtext a {
   display: block;
   transition: all ease 0.5s;
-
 }
 
-.footerTextDiv:hover .longerLine
-{
+.footerTextDiv:hover .longerLine {
   min-width: 53%;
   transition: all ease 0.5s;
 }
@@ -1175,7 +1168,7 @@ footer {
   /* background-color: red; */
 }
 
-.emailtext a{
+.emailtext a {
   display: none;
   text-decoration: none;
   font-size: 2vw;
@@ -1214,7 +1207,7 @@ footer {
     font-size: 1.2rem;
   }
 
-  .emailtext a{
+  .emailtext a {
     font-size: 0.7rem;
     top: 5%;
     right: 4%;
@@ -1224,9 +1217,7 @@ footer {
     margin-bottom: 6px;
   }
 
-  .footerTextDiv:hover .longerLine
-{
-  min-width: 38%;
-}
-
+  .footerTextDiv:hover .longerLine {
+    min-width: 38%;
+  }
 }
