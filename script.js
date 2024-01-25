@@ -324,7 +324,7 @@ function logoShrink() {
     tl1.to(".logoTextSection", { duration: 0.8, y: -600 }, "+.9");
   } else {
     tl1.to(".bullimg", { duration: 0.8, width: "7.5%", top: "8%" }, "+.6");
-    tl1.to(".nameLogo", { duration:1, top: "18%" }, "+.6");
+    tl1.to(".nameLogo", { duration:1, top: "8%" }, "+.6");
     tl1.to(".logoTextSection", { duration: 0.8, top: "38%" }, "+.9");
   }
 
