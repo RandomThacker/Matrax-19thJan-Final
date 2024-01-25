@@ -635,12 +635,12 @@ body {
 /* <!-- -------------------Logo Shrink Section------------------ --> */
 
 #section {
-  position: relative;
   height: 100vh;
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
+  position: relative;
     /* background-color: red; */
   /* background-color: aqua; */
 }
@@ -676,12 +676,12 @@ body {
 }
 
 .logoTextSection p {
-  font-size: 1.3vw;
+  font-size: 1.1vw;
   /* background-color: #cda050; */
 }
 
 .logoTextSection h6 {
-  font-size: 1.4vw;
+  font-size: 1.3vw;
   padding-bottom: 5px;
 }
 
@@ -690,7 +690,9 @@ body {
 }
 
 .bottomTextSection img {
-  scale: 0.7;
+  /* scale: 0.7; */
+  width: 12vw;
+  margin-top: 2vw;
   cursor: pointer;
 }
 
@@ -701,7 +703,7 @@ body {
   margin: 0 auto;
   height: 10vh;
   opacity: 1;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, 0%);
   left: 50%;
   top: 120%;
 }
