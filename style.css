@@ -649,7 +649,7 @@ body {
   width: 40%;
   z-index: 9;
   transform: scale(1);
-  transition: all ease 0.5s;
+  /* transition: all ease 0.5s; */
   position: absolute;
 }
 
@@ -676,13 +676,12 @@ body {
 }
 
 .logoTextSection p {
-  font-size: 1.1rem;
-  line-height: 1.8rem;
+  font-size: 1.3vw;
   background-color: #cda050;
 }
 
 .logoTextSection h6 {
-  font-size: 1.3rem;
+  font-size: 1.4vw;
   padding-bottom: 5px;
 }
 
