@@ -769,6 +769,44 @@ body {
   margin-top: 80px;
 }
 
+
+@media screen and (min-width: 1000px) and (max-width: 1200px) {
+  .nameLogo{
+    margin-top: 60px;
+  }
+}
+
+@media screen and (min-width: 1200px) and (max-width: 1400px) {
+  .nameLogo{
+    margin-top: 70px;
+  }
+}
+
+
+@media screen and (min-width: 1800px) and (max-width: 2200px) {
+  .nameLogo{
+    margin-top: 100px;
+  }
+}
+
+@media screen and (min-width: 2200px) and (max-width: 2700px) {
+  .nameLogo{
+    margin-top: 140px;
+  }
+}
+
+@media screen and (min-width: 2700px) and (max-width: 3840px) {
+  .nameLogo{
+    margin-top: 200px;
+  }
+}
+
+@media screen and (min-width: 3840px) and (max-width: 4100px) {
+  .nameLogo{
+    margin-top: 220px;
+  }
+}
+
 .logoShrink {
   position: relative;
 }
