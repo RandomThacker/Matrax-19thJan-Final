@@ -276,6 +276,11 @@ body {
     margin-top: -15%;
     background: none !important;
   }
+
+  .HeroHeading h1 {
+    line-height: 2.75rem;
+  }
+
 }
 
 /* <!-- ----------------Page 1 - Video Section------------- --> */
@@ -697,7 +702,7 @@ body {
   justify-content: center;
   overflow: hidden;
   position: relative;
-  background-color: red;
+  /* background-color: red; */
   /* background-color: aqua; */
 }
 
@@ -761,7 +766,7 @@ body {
   transform: translate(-50%, 0%);
   left: 50%;
   top: 120%;
-  background-color: #cd9c49;
+  /* background-color: #cd9c49; */
   margin-top: 80px;
 }
 
@@ -797,10 +802,9 @@ body {
   }
 
   .nameLogo {
-    width: 15%;
+    width: 55%;
     display: block;
     margin: 0 auto;
-    height: 10vh;
   }
 
   .logoTextSection h6 {
@@ -815,6 +819,12 @@ body {
 
   .bullStoryImage img {
     width: 80vw;
+  }
+
+  .bottomTextSection img {
+    /* scale: 0.7; */
+    width: 41vw;
+    margin-top: 2vw;
   }
 }
 

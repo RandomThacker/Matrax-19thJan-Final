@@ -322,9 +322,9 @@ function logoShrink() {
   tl1.fromTo(dot, { scale: 0 }, { scale: 1 });
 
   if (window.innerWidth < 600) {
-    tl1.to(".bullimg", { duration: 0.8, width: "55%", y: -300 }, "+.6");
-    tl1.to(".nameLogo", { duration: 0.8, y: -650 }, "+.6");
-    tl1.to(".logoTextSection", { duration: 0.8, y: -600 }, "+.9");
+    tl1.to(".bullimg", { duration: 0.8, width: "25%", top: "5%"}, "+.6");
+    tl1.to(".nameLogo", { duration: 0.8, top: "13%" }, "+.6");
+    tl1.to(".logoTextSection", { duration: 0.8, top:"30%"}, "+.9");
   } else {
     tl1.to(".bullimg", { duration: 0.8, width: "8%", top: "8%" }, "+.6");
     tl1.to(".nameLogo", { duration: 0.8, top: "8%" }, "+.6");
@@ -373,7 +373,6 @@ function myFunction(x) {
 
 var x = window.matchMedia("(max-width: 700px)");
 myFunction(x);
-// Attach listener function on state changes
 x.addEventListener("change", function () {
   myFunction(x);
 });
