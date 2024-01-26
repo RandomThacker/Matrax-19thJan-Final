@@ -280,7 +280,6 @@ body {
   .HeroHeading h1 {
     line-height: 2.75rem;
   }
-
 }
 
 /* <!-- ----------------Page 1 - Video Section------------- --> */
@@ -408,9 +407,9 @@ body {
   margin-bottom: 50px;
 }
 
-.splide__list li {
-  background-color: #c8c8c8;
-}
+/* .splide__list li {
+   background-color: #c8c8c8; 
+} */
 
 .stupidContainer {
   display: flex;
