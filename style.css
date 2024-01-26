@@ -9,7 +9,7 @@ body {
   height: 100%;
   width: 100%;
   font-family: "Montserrat", sans-serif;
-  overflow: hidden;
+  overflow-x: hidden;
 }
 
 .cursor {
@@ -295,10 +295,11 @@ body {
   from {
     width: 100%;
     height: 100%;
+    /* transform: scale(1, 1); */
   }
   to {
-    height: 150%;
-    width: 150%;
+    height: 110%;
+    width: 110%;
     /* transform: scale(1.9, 1.9); */
   }
 }
@@ -325,8 +326,8 @@ body {
   grid-column-gap: 6px;
   grid-row-gap: 0px;
   position: absolute;
-  transform: translate(-50%, -50%);
-  top: 150%;
+  transform: translate(-50%, 0%);
+  top: 31%;
   left: 49.5%;
   z-index: 50;
 }
@@ -415,9 +416,16 @@ body {
   width: 50vw;
 }
 
-.splide__slide img {
-  -webkit-animation: zoom 30s infinite;
-  animation: zoom 30s infinite;
+.splide__slide > img {
+  /* height: 100%; */
+
+  height: 100vh;
+  /* object-fit: cover; */
+}
+
+.zoomIn {
+  -webkit-animation: zoom 5s infinite;
+  animation: zoom 5s infinite;
 }
 
 /* responsive */
@@ -446,9 +454,10 @@ body {
     grid-column-gap: 0px;
     grid-row-gap: 0px;
     position: absolute;
-    transform: translate(-50%, -50%);
-    top: 150%;
-    left: 50%;
+    transform: translate(-50%, -9%);
+    top: 30%;
+    /* left: 49.5%; */
+    /* z-index: 50; */
     z-index: 1;
   }
 
@@ -492,7 +501,6 @@ body {
     /* position: absolute !important; */
   }
 }
-
 
 /* ------------Horizontal Scroll--------- */
 
