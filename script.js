@@ -272,6 +272,18 @@ function bullStory() {
       top: "55%",
     });
   }
+
+  gsap.to(".bullStory h1", {
+    scrollTrigger: {
+      trigger: "#main",
+      markers: true,
+      start: "42.9% top",
+      end: "55% top",
+      scrub: 2,
+    },
+    color: "white", // Set the target color to white
+  });
+
 }
 bullStory();
 

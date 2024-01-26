@@ -603,7 +603,7 @@ body {
 
 .bullStory h1 {
   text-transform: uppercase;
-  color: #fff;
+  color: #000000;
   font-size: clamp(3.5rem, 7vw, 8rem);
   line-height: 7vw;
   text-align: center;
