@@ -831,7 +831,7 @@ body {
 
 /* ---------global presence------- */
 .globalPresence {
-  /* height: 100vh; */
+  max-height: 110vh;
   width: 100vw;
   position: relative;
   /* background-color: rgb(198, 97, 97); */
@@ -875,7 +875,7 @@ body {
   /* height: 90%; */
   object-fit: cover;
   object-position: center;
-  /* width: 100%; */
+  width: 100%;
   /* width: 100%; */
   /* background-color: #a90000; */
   padding: 1vw 0;
@@ -887,7 +887,8 @@ body {
 }
 
 .gp-div-sm {
-  width: fit-content;
+  /* width: fit-content; */
+  width: 80%;
   position: relative;
   margin: auto;
   /* margin-top: -5%; */
