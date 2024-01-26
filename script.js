@@ -128,7 +128,7 @@ function dom() {
       trigger: "#main",
       start: "top top",
       end: "3% top",
-      // markers: true,
+      // //markers: true,
     },
     onUpdate: render,
   });
@@ -167,7 +167,7 @@ function dom() {
       trigger: ".navBar",
       start: "top top",
       end: "center top",
-      // markers: true,
+      // //markers: true,
     },
   });
 }
@@ -189,7 +189,7 @@ function videoSection() {
         end: "20% top",
         scrub: true,
         // pin: true,
-        markers: true,
+        // //markers: true,
       },
       duration: 0.5, // Adjust the duration as needed
       stagger: 0.1,
@@ -198,7 +198,7 @@ function videoSection() {
   });
   ScrollTrigger.create({
     trigger: "#main",
-    markers: true,
+    // //markers: true,
     start: "14.3% top",
     end: "20% top",
     pin: true,
@@ -223,7 +223,7 @@ function splitCarousel() {
         end: "34% top",
         scrub: true,
         // pin: true,
-        markers: true,
+        //markers: true,
       },
       duration: 0.5, // Adjust the duration as needed
       stagger: 0.1,
@@ -232,7 +232,7 @@ function splitCarousel() {
   });
   ScrollTrigger.create({
     trigger: "#main",
-    markers: true,
+    //markers: true,
     start: "28.5% top",
     end: "34% top",
     pin: true,
@@ -244,7 +244,7 @@ splitCarousel();
 function bullStory() {
   ScrollTrigger.create({
     trigger: "#main",
-    markers: true,
+    //markers: true,
     start: "42.9% top",
     end: "55% top",
     pin: true,
@@ -253,7 +253,7 @@ function bullStory() {
     gsap.to(".bullStoryOverlay", {
       scrollTrigger: {
         trigger: "#main",
-        markers: true,
+        //markers: true,
         start: "42.9% top",
         end: "55% top",
         scrub: 2,
@@ -264,7 +264,7 @@ function bullStory() {
     gsap.to(".bullStoryOverlay", {
       scrollTrigger: {
         trigger: "#main",
-        markers: true,
+        //markers: true,
         start: "42.9% top",
         end: "55% top",
         scrub: 2,
@@ -276,7 +276,7 @@ function bullStory() {
   gsap.to(".bullStory h1", {
     scrollTrigger: {
       trigger: "#main",
-      markers: true,
+      //markers: true,
       start: "42.9% top",
       end: "55% top",
       scrub: 2,
@@ -308,7 +308,7 @@ function logoShrink() {
       pin: true,
       pinSpacing: true,
       invalidateOnRefresh: true,
-      markers: true,
+      //markers: true,
       onEnter: () => {
         gsap.set(".bullimg", { zIndex: 10 });
       },

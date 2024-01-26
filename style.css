@@ -885,7 +885,7 @@ body {
   /* height: 40vh; */
   /* background-color: cornflowerblue; */
   align-items: flex-end;
-  padding: 0 0 4vw 12vw;
+  padding: 2vw 0 2vw 12vw;
 
   overflow: hidden;
   gap: 4vw;
