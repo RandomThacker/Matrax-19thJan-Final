@@ -16,20 +16,19 @@ document.body.addEventListener("mousemove", function (dets) {
   });
 });
 
-var splide3 = new Splide("#splide", {
-  classes: {
-    pagination: "splide__pagination tyre-pagination",
-    page: "splide__pagination__page your-class-page",
-  },
-  autoplay: "play",
-  pauseOnHover: false,
-  type: "loop",
-  perPage: 1,
-  arrows: false,
-  interval: 2500,
-});
-
-splide3.mount(window.splide3.Extensions);
+// var splide3 = new Splide("#splide", {
+//   classes: {
+//     pagination: "splide__pagination tyre-pagination",
+//     page: "splide__pagination__page your-class-page",
+//   },
+//   autoplay: "play",
+//   pauseOnHover: false,
+//   type: "loop",
+//   perPage: 1,
+//   arrows: false,
+//   interval: 2500,
+// });
+// splide3.mount(window.splide3.Extensions);
 
 function disableScroll() {
   var scrollY = window.scrollY;
